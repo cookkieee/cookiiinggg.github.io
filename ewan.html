@@ -1,0 +1,104 @@
+﻿<style>
+    body {
+        background-image: url('bg.jpg');
+        background-size: 1370px 850px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    }
+
+    li {
+        float: left;
+        font-size: 20px;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 40px;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                background-color: black;
+            }
+
+    .active {
+        background-color: forestgreen;
+    }
+    font {
+        float: center;
+    }
+    img {
+        border-radius: 10px;
+        margin: 5px;
+        transition: 1s;
+    }
+            .img:hover {
+                transform: scale(1.1);
+                filter: grayscale(100%);
+            }
+
+    .gallery {
+        background-color: #242323;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 70px;
+        font-family: 'Gambetta', serif;
+        color: palegoldenrod;
+        margin: 0px;
+        text-shadow: 1px 4px black;
+    }
+        h1:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+    .gallery {
+        margin: 0px;
+    }
+
+        .gallery img {
+            transition: 1s;
+            width: 429px;
+            height: 300px;
+            border-radius: 20px;
+        }
+
+            .gallery img:hover {
+                transform: scale(1.1);
+            }
+
+</style>
+<body>
+    <ul>
+        <li><a class="active" href="home.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="room.html">ROOM</a></li>
+        <li><a href="ewan.html">DINING</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <img src="haha.jpg" width="1320" height="400">
+    <h1>DINING</h1>
+    <div class="gallery">
+        <a href="dining1.jpg"><img src="dining1.jpg" width="429px" height="300px"></a>
+        <a href="dining2.jpg"><img src="dining2.jpg" width="429px" height="300px"></a>
+        <a href="dining3.jpg"><img src="dining3.jpg" width="429px" height="300px"></a>
+        <a href="dining4.jpg"><img src="dining4.jpg" width="429px" height="300px"></a>
+        <a href="dining5.jpg"><img src="dining5.jpg" width="429px" height="300px"></a>
+        <a href="dining6.jpg"><img src="dining6.jpg" width="429px" height="300px"></a>
+        <a href="dining7.jpg"><img src="dining7.jpg" width="429px" height="300px"></a>
+        <a href="dining8.jpg"><img src="dining8.jpg" width="429px" height="300px"></a>
+        <a href="dining9.jpg"><img src="dining9.jpg" width="429px" height="300px"></a>
+    </div>
+</body>

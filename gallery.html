@@ -1,0 +1,230 @@
+﻿<style>
+    body {
+        background-image: url('bg.jpg');
+        background-size: 1370px 850px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+
+    }
+
+    li {
+        float: left;
+        font-size: 20px;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 40px;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                background-color: black;
+            }
+
+    .active {
+        background-color: forestgreen;
+    }
+
+    h1 {
+        font-size: 3em;
+        letter-spacing: 5px;
+        font-family: sans-serif;
+        margin-left: 40px;
+        cursor: pointer;
+        transition: .6s;
+        color: white;
+        text-align: left;
+    }
+
+        h1:before,
+        h1:after {
+            content: attr(data-text);
+            transition: .6s;
+        }
+
+        h1:before {
+            left: 0;
+            top: 0;
+            position: absolute;
+            z-index: -1;
+            text-shadow: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+            -webkit-mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+            mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+        }
+
+        h1:hover {
+            transform: translate(-10px,-10px);
+        }
+
+            h1:hover:before {
+                text-shadow: 1px 1px, 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px, 8px 8px, 9px 9px, 10px 10px;
+            }
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    body {
+        margin: 0;
+    }
+
+    .wrapper {
+        background: none;
+        display: grid;
+        grid-template-areas: 'overlap';
+        place-content: center;
+        text-transform: uppercase;
+        height: 10vh;
+    }
+
+        .wrapper > div {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: #363833;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: clamp( 3em, 5vw, 15rem);
+            grid-area: overlap;
+            letter-spacing: 1px;
+            -webkit-text-stroke: 4px transparent;
+        }
+
+    div.bg {
+        background-image: repeating-linear-gradient( 105deg, var(--gold) 0%, var(--dark-shadow) 5%, var(--gold) 12%);
+        color: transparent;
+        filter: drop-shadow(5px 15px 15px black);
+        transform: scaleY(1.05);
+        transform-origin: top;
+    }
+
+    div.fg {
+        background-image: repeating-linear-gradient( 5deg, var(--gold) 0%, var(--light-shadow) 23%, var(--gold) 31%);
+        color: #1e2127;
+        transform: scale(1);
+    }
+
+    body {
+        background-color: #111;
+    }
+
+    .container {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 120px;
+        text-transform: uppercase;
+        font-family: 'Gambetta', serif;
+        letter-spacing: -3px;
+        transition: 700ms ease;
+        font-variation-settings: "wght" 311;
+        margin-bottom: 0.8rem;
+        color: palegoldenrod;
+        outline: none;
+        text-align: center;
+    }
+
+        h2:hover {
+            font-variation-settings: "wght" 582;
+            letter-spacing: 1px;
+        }
+
+    .gallery {
+        margin: 10px 50px;
+    }
+
+        .gallery img {
+            transition: 1s;
+            padding: 15px;
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            box-shadow: 5px 2px inset white;
+        }
+
+            .gallery img:hover {
+                transform: scale(1.1);
+            }
+
+
+    .box {
+        border-radius: 30px;
+        padding: 10px 10px;
+    }
+
+
+
+</style>
+<body>
+    <ul>
+        <li><a class="active" href="home.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="room.html">ROOM</a></li>
+        <li><a href="ewan.html">DINING</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="container">
+        <h2 contenteditable>Gallery</h2>
+    </div>
+    <div class="gallery">
+        <h1 data-text="POOL"></h1>
+        <div class="box">
+            <center>
+                <a href="pool1.jpg"><img src="pool1.jpg" height="200" width="400"></a>
+                <a href="pool2.jpg"><img src="pool2.jpg" height="200" width="400"></a>
+                <a href="pool4.jpg"><img src="pool4.jpg" height="200" width="400"></a>
+            </center>
+        </div>
+        <h1 data-text="FOOD"></h1>
+        <div class="box">
+            <center>
+                <a href="food1.jpg"><img src="food1.jpg" height="200" width="400"></a>
+                <a href="food2.jpg"><img src="food2.jpg" height="200" width="400"></a>
+                <a href="food3.jpg"><img src="food3.jpg" height="200" width="400"></a><br>
+                <a href="food4.jpg"><img src="food4.jpg" height="200" width="400"></a>
+                <a href="food5.jpg"><img src="food5.jpg" height="200" width="400"></a>
+                <a href="food6.jpg"><img src="food6.jpg" height="200" width="400"></a>
+            </center>
+        </div>
+        <h1 data-text="BALI"></h1>
+        <div class="box">
+            <center>
+                <a href="bali.jpg"><img src="bali.jpg" height="200" width="400"></a>
+                <a href="bali2.jpg"><img src="bali2.jpg" height="200" width="400"></a>
+                <a href="bali3.jpg"><img src="bali3.jpg" height="200" width="400"></a>
+                <a href="bali4.jpg"><img src="bali4.jpg" height="200" width="400"></a>
+                <a href="bali5.jpg"><img src="bali5.jpg" height="200" width="400"></a>
+                <a href="bali6.jpg"><img src="bali6.jpg" height="200" width="400"></a>
+                <a href="bali7.jpg"><img src="bali7.jpg" height="200" width="400"></a>
+                <a href="bali8.jpg"><img src="bali8.jpg" height="200" width="400"></a>
+                <a href="bali9.jpg"><img src="bali9.jpg" height="200" width="400"></a>
+            </center>
+        </div>
+        <h1 data-text="FALLS"></h1>
+        <div class="box">
+            <center>
+                <a href="falls1.jpg"><img src="falls1.jpg" height="200" width="400"></a>
+                <a href="falls2.jpg"><img src="falls2.jpg" height="200" width="400"></a>
+                <a href="falls3.jpg"><img src="falls3.jpg" height="200" width="400"></a>
+            </center>
+        </div></div>
+</body>

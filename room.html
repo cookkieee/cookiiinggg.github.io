@@ -1,0 +1,266 @@
+﻿<style>
+    body {
+        background-image: url('bg.jpg');
+        background-size: 1370px 850px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    }
+
+    li {
+        float: left;
+        font-size: 20px;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 40px;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                background-color: black;
+            }
+
+    .active {
+        background-color: forestgreen;
+    }
+
+    .box {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 600px;
+        float: right;
+        margin: 10px;
+    }
+
+    .box2 {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 600px;
+        float: left;
+        margin: 10px;
+    }
+
+    .box3 {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 600px;
+        float: right;
+        margin: 10px;
+    }
+
+    .box4 {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 600px;
+        float: left;
+        margin: 10px;
+    }
+
+    .box5 {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 600px;
+        float: right;
+        margin: 10px;
+    }
+
+    .box6 {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        width: 600px;
+        float: left;
+        margin: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --bg-color: #D8D8D8;
+    }
+
+    h1 {
+        font-size: 3em;
+        font-weight: normal;
+        text-align: center;
+        color: white;
+        font-family: 'Gambetta', serif;
+        text-shadow: 4px 1px black;
+        letter-spacing: 3.5px;
+    }
+
+    /* title styles */
+    .home-title span {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        line-height: 1.2;
+    }
+
+        .home-title span::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(-101%);
+        }
+
+        .home-title span::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(0);
+        }
+
+        .home-title span:nth-of-type(1)::before,
+        .home-title span:nth-of-type(1)::after {
+            animation-delay: 1s;
+        }
+
+        .home-title span:nth-of-type(2)::before,
+        .home-title span:nth-of-type(2)::after {
+            animation-delay: 1.5s;
+        }
+
+    @keyframes a-ltr-after {
+        0% {
+            transform: translateX(-100%)
+        }
+
+        100% {
+            transform: translateX(101%)
+        }
+    }
+
+    @keyframes a-ltr-before {
+        0% {
+            transform: translateX(0)
+        }
+
+        100% {
+            transform: translateX(200%)
+        }
+    }
+
+    .gallery {
+        margin: 10px;
+    }
+
+        .gallery img {
+            transition: 1s;
+            padding: 15px;
+            width: 550px;
+            height: 300px;
+            border-radius: 20px;
+            box-shadow: 2px 2px whitesmoke;
+        }
+
+            .gallery img:hover {
+                transform: scale(1.1);
+            }
+
+    h1:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    h2 {
+        font-size: 4em;
+        font-weight: 200 100 100;
+        text-align: center;
+        color: palegoldenrod;
+        font-family: 'Gambetta', serif;
+        text-shadow: 4px 1px black;
+        letter-spacing: 3.5px;
+        margin: 0px;
+    }
+    h2:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+</style>
+<body>
+    <ul>
+        <li><a class="active" href="home.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="room.html">ROOM</a></li>
+        <li><a href="ewan.html">DINING</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <center><h2>ROOMS</h2></center>
+
+    <div class="gallery">
+        <div class="box">
+            <center><a href="standard.html"><img src="pic6.jpg" height="300" width="520"></a></center>
+            <h1 class="home-title">
+                <span>STANDARD ROOM</span>
+            </h1>
+        </div>
+
+        <div class="box2">
+            <center><a href="villa.html"><img src="villa5.jpg" height="300" width="520"></a></center>
+            <h1 class="home-title">
+                <span>VILLA ROOM</span>
+            </h1>
+        </div>
+
+        <div class="box3">
+            <center><a href="kubo.html"><img src="pre1.jpg" height="300" width="520"></a></center>
+            <h1 class="home-title">
+                <span>KUBO ROOM</span>
+            </h1>
+        </div>
+
+        <div class="box4">
+            <center><a href="family.html"><img src="pice.jpg" height="300" width="520"></a></center>
+            <h1 class="home-title">
+                <span>FAMILY ROOM</span>
+            </h1>
+        </div>
+
+
+        <div class="box5">
+            <center><a href="cabin.html"><img src="cabin1.jpg" height="300" width="520"></a></center>
+            <h1 class="home-title">
+                <span>CABIN ROOM</span>
+            </h1>
+        </div>
+
+        <div class="box6">
+            <center><a href="gab.html"><img src="gab1.jpg" height="300" width="520"></a></center>
+            <h1 class="home-title">
+                <span>GLAMPING ROOM</span>
+            </h1>
+        </div>
+    </div>
+</body>

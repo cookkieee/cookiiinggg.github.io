@@ -1,0 +1,236 @@
+﻿<style>
+
+    body {
+        background-image: url('bg.jpg');
+        background-size: 1370px 850px;
+    }
+
+    :root {
+        --color-primary: hsl(310, 100%, 65%);
+        --color-secondary: hsl(160, 100%, 65%);
+        --background: hsl(230, 30%, 15%);
+        --text: hsl(310, 100%, 95%);
+    }
+
+    ::selection {
+        background-color: var(--color-primary);
+        color: var(--background);
+        -webkit-text-fill-color: var(--background);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        color: palegoldenrod;
+        font-size: 45px;
+    }
+
+        h1:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+    blockquote {
+        border-left: 5px solid;
+        padding: 1rem 0 1rem 2rem;
+        font-size: 30px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient( 35deg, var(--color-primary), var(--color-secondary) );
+        p
+
+    {
+        margin: 0;
+    }
+
+    }
+
+    .text {
+        border: 2px solid none;
+        padding: 10px 10px;
+        background-color: var(--background);
+        border-radius: 2px;
+        width: 1300px;
+        height: 550px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 50px;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+
+    .slideshow-container {
+        border-radius: 20px;
+        max-width: 750px;
+        position: relative;
+        margin: 60px;
+        float: left;
+    }
+
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+    .numbertext {
+        color: black;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    }
+
+    li {
+        float: left;
+        font-size: 20px;
+    }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 40px;
+            text-decoration: none;
+        }
+
+            li a:hover {
+                background-color: black;
+            }
+
+    .active {
+        background-color: forestgreen;
+    }
+</style>
+<body>
+    <ul>
+        <li><a class="active" href="home.html">HOME</a></li>
+        <li><a href="room.html">ROOM</a></li>
+    </ul>
+
+    <div class="family room">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="gab1.jpg" width="750" height="450">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="gab2.jpg" width="750" height="450">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertex">3 / 5</div>
+                <img src="gab3.jpg" width="750" height="450">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="gab4.jpg" width="750" height="450">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="gab5.jpg" width="750" height="450">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="text">
+            <h1>GLAMPING ROOM</h1>
+            <blockquote>
+                <p>
+                    Room Rate for 6 pax<br>
+                    Six Queen size beds<br>
+                    Fits 12 pax<br>
+                    Airconditioned Room<br>
+                    Free Breakfast for 6 pax<br>
+                    Ensuite H&C shower with Toilet<br>
+                    Mini Refrigerator<br>
+                    Long table with Chair<br>
+                    Balcony<br>
+                </p>
+            </blockquote>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
